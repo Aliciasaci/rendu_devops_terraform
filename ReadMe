@@ -1,0 +1,41 @@
+# Infrastructure Terraform pour AWS
+
+Dans ce projet, nous créons une machine EC2 sur AWS et déployons un site que nous avons développé pour un précédent projet de cours.
+
+### Le site est accessible sur le port `5173`
+
+### installation 
+```
+Terraform init
+```
+
+```
+Terraform apply
+```
+
+### Variables
+
+Ce projet utilise les variables suivantes :
+
+- `aws_region`: La région AWS où les ressources seront créées.
+- `aws_ami`: L'ID de l'AMI à utiliser pour l'instance EC2.
+- `instance_type`: Le type d'instance EC2 à déployer.
+- `vm_user`: Le nom de l'utilisateur pour se connecter à l'instance.
+- `keypair_name`: Le nom de la paire de clés SSH.
+- `instance_name`: Le nom de l'instance EC2.
+- `AWS_SECRET_ACCESS_KEY`: La clé secrète AWS pour l'authentification.
+- `AWS_ACCESS_KEY_ID`: L'ID de clé d'accès AWS pour l'authentification.
+
+### Fichier `terraform.tfvars`
+
+```hcl
+aws_region            = "eu-west-3"
+aws_ami               = "ami-12345678"
+instance_type         = "t2.micro"
+vm_user               = "ubuntu"
+keypair_name          = "my-keypair"
+instance_name         = "my-instance"
+AWS_SECRET_ACCESS_KEY = "your-secret-key"
+AWS_ACCESS_KEY_ID     = "your-access-key"
+
+
