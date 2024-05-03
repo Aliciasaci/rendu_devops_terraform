@@ -1,16 +1,22 @@
 # Infrastructure Terraform pour AWS
 
-Dans ce projet, nous créons une machine EC2 sur AWS et déployons un site que nous avons développé pour un précédent projet de cours.
+Dans ce projet, nous créons une machine virtuelle EC2 sur AWS et déployons un site que nous avons développé pour un précédent projet de cours.
 
 ### Le site est accessible sur le port `5173`
 
 ### installation 
+1. Initialisation de Terraform
 ```
 Terraform init
 ```
-
+2. Voir + Appliquer les changement
 ```
 Terraform apply
+```
+
+3. Détruire le terraform
+```
+Terraform destroy
 ```
 
 ### Variables
@@ -37,5 +43,9 @@ keypair_name          = "my-keypair"
 instance_name         = "my-instance"
 AWS_SECRET_ACCESS_KEY = "your-secret-key"
 AWS_ACCESS_KEY_ID     = "your-access-key"
+```
 
+### Script.sh
+
+script.sh est le fichier copié et executé sur la vm distante. Il permet d'installer git, docker et de déployer le site sur docker.
 
